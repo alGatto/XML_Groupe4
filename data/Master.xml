@@ -197,9 +197,21 @@
                 <hour_td>10h</hour_td>
                 <hour_tp>10h</hour_tp>  
             </plan>
-            <place>Aix-en-Provence</place>      
+            <place>Bordeaux</place>      
         </unite>
-        
+        <unite id="ENSMAU3">
+            <name>xamarin</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="BATISTONI"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>6</credits>
+            <plan>
+                <hour_cours>20h</hour_cours>
+                <hour_td>20h</hour_td>
+                <hour_tp>20h</hour_tp>  
+            </plan>
+            <place>Aix-en-Provence</place>      
+        </unite>        
         <unite id="ENSMBU6">
             <name>Marketing Digital</name>
             <credits>3</credits>
@@ -222,33 +234,42 @@
                 <debouch>Administrateur réseau/système</debouch>
                 <debouch>Architecte logiciel</debouch>
                 <debouch>Chef de projets</debouch>
+                <debouch>Chercheur et enseignant-chercheur</debouch>
+                <debouch>Consultant fonctionnel</debouch>
                 <debouch>Ingénieur d'études, de recherche et de développement</debouch>
+                <debouch>Ingénieur développeur d'applications Web</debouch>
+                <debouch>Ingénieur intégration</debouch>
+                <debouch>Responsable qualité et/ou sécurité Informatique</debouch>
             </liste_debouch>
             <semester id="semestre1">
                 <bloc role="majeur1">
                     <liste_ref-unite>
+                        <ref-unite ref-unite="ENSMAU1"></ref-unite>
+                        <ref-unite ref-unite="ENSMAU2"></ref-unite>
+                        <ref-unite ref-unite="ENSMAU3"></ref-unite>
                         <ref-unite ref-unite="ENSMAU4"></ref-unite>
-                        <ref-unite ref-unite="ENSMCU3"></ref-unite>
+                        <ref-unite ref-unite="ENSMBU1"></ref-unite>
+                        <ref-unite ref-unite="ENSMBU2"></ref-unite>
                     </liste_ref-unite>
                 </bloc>
                 <bloc role="electif1">
                     <liste_ref-unite>
-                        <ref-unite ref-unite="ENSMBU10"></ref-unite>
-                        <ref-unite ref-unite="ENSMBU6"></ref-unite>
+                        <ref-unite ref-unite="ENSMCU1"></ref-unite>
+                        <ref-unite ref-unite="ENSMCU2"></ref-unite>
                     </liste_ref-unite>
                 </bloc>
             </semester>
             <semester id="semestre2">
                 <bloc role="majeur2">
                     <liste_ref-unite>
-                        <ref-unite ref-unite="ENSMAU4"></ref-unite>
-                        <ref-unite ref-unite="ENSMCU3"></ref-unite>
+                        <ref-unite ref-unite="ENSMBU9"></ref-unite>
+                        <ref-unite ref-unite="ENSMBU10"></ref-unite>
                     </liste_ref-unite>
                 </bloc>
                 <bloc role="electif2">
                     <liste_ref-unite>
-                        <ref-unite ref-unite="ENSMAU4"></ref-unite>
-                        <ref-unite ref-unite="ENSMBU10"></ref-unite>
+                        <ref-unite ref-unite="ENSMCU3"></ref-unite>
+                        <ref-unite ref-unite="ENSMCU4"></ref-unite>
                     </liste_ref-unite>
                 </bloc>
             </semester>
