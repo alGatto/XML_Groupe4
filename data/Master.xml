@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE master SYSTEM "Master.dtd">
+<master>
+    <lecturers>
+        <lecturer id="AZZAG">
+            <name>AZZAG </name>
+            <last_name>Samir</last_name>
+            <mail>samir.azzag@ynov.com</mail>
+            <phone>04.91.01.02.03</phone>
+            <site>samir-azzag.fr</site>
+        </lecturer>
+        <lecturer id="BATISTONI">
+            <name>BATISTONI</name>
+            <last_name>Eric</last_name>
+            <mail>eric.batistoni@ynov.com</mail>
+        </lecturer>
+        <lecturer id="CHAUVET">
+            <name>CHAUVET</name>
+            <last_name>Emmanuel</last_name>
+            <mail>emmanuel.chauvet@ynov.com</mail>
+            <phone>04.91.01.02.04</phone>
+        </lecturer>
+    </lecturers>
+    <unites>
+        <unite id="ENSMAU4">
+            <name>.NET</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="AZZAG"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>15h</hour_cours>
+                <hour_td>8h</hour_td>
+                <hour_tp>5h</hour_tp>
+                <place>Aix-en-Provence</place>
+                <place>Lyon</place>
+                <place>Bordeaux</place>
+            </plan>
+        </unite>
+        <unite id="ENSMBU10">
+            <name>CISSP</name>
+            <credits>3</credits>
+        </unite>
+        <unite id="ENSMBU4">
+            <name>CCNP</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="BATISTONI"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <resume>Architecture en couches, standard OSI - Couche physique - Couche liaison de Données - Réseau IP - Algorithmes de routage, routage IP - Protocole TCP/IP - Couche Application : HTTP, SMTP, FTP, ... - protocoles cryptographiques (terminologie, architecture à clef publique). - Sécurité des réseaux.</resume>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>
+                <place>Aix-en-Provence</place>
+                <place>Lyon</place>
+                <place>Bordeaux</place>
+            </plan>
+        </unite>
+        <unite id="ENSMBU6">
+            <name>Marketing Digital</name>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>
+                <place>Bordeaux</place>
+            </plan>
+        </unite>
+        <unite id="ENSMCU3">
+            <name>Développement : Unity- applications mobiles et jeux vidéos</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="AZZAG"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>6</credits>
+        </unite>
+    </unites>
+    <program>
+        <parcour id="Master1_INGESUP">
+            <responsable ref_lecturer="AZZAG"></responsable>
+            <name>Master 1 INGESUP</name>
+            <description>L'objectif de cette première année est de donner les bases indispensables permettant, ...</description>
+            <liste_debouch>
+                <debouch>Administrateur de bases de données ou d'entrepôts de données</debouch>
+                <debouch>Administrateur ou architecte de systèmes d'information</debouch>
+                <debouch>Administrateur réseau/système</debouch>
+                <debouch>Architecte logiciel</debouch>
+                <debouch>Chef de projets</debouch>
+                <debouch>Ingénieur d'études, de recherche et de développement</debouch>
+            </liste_debouch>
+            <semester id="semestre1">
+                <bloc role="majeur1">
+                    <liste_ref-unite>
+                        <ref-unite ref-unite="ENSMAU4"></ref-unite>
+                        <ref-unite ref-unite="ENSMCU3"></ref-unite>
+                    </liste_ref-unite>
+                </bloc>
+                <bloc role="electif1">
+                    <liste_ref-unite>
+                        <ref-unite ref-unite="ENSMBU10"></ref-unite>
+                        <ref-unite ref-unite="ENSMBU6"></ref-unite>
+                    </liste_ref-unite>
+                </bloc>
+            </semester>
+            <semester id="semestre2">
+                <bloc role="majeur2">
+                    <liste_ref-unite>
+                        <ref-unite ref-unite="ENSMAU4"></ref-unite>
+                        <ref-unite ref-unite="ENSMCU3"></ref-unite>
+                    </liste_ref-unite>
+                </bloc>
+                <bloc role="electif2">
+                    <liste_ref-unite>
+                        <ref-unite ref-unite="ENSMAU4"></ref-unite>
+                        <ref-unite ref-unite="ENSMBU10"></ref-unite>
+                    </liste_ref-unite>
+                </bloc>
+            </semester>
+        </parcour>
+    </program>
+</master>

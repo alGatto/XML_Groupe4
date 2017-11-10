@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT master (lecturers?, unites?,  program)>
+
+<!ELEMENT lecturers (lecturer+) >
+<!ELEMENT lecturer (name, last_name, mail?, phone?, site*) >
+
+<!ELEMENT unites (unite+) >
+<!ELEMENT unite (name, liste_ref_lecturers?, credits, resume?, plan?) >
+<!ELEMENT liste_ref_lecturers (ref_lecturer+) >
+<!ELEMENT plan (hour_cours, hour_td, hour_tp, place*) >
+
+<!ELEMENT program (parcour+ | specialty) >
+<!ELEMENT specialty (responsable+, name, description, parcour+) >
+<!ELEMENT parcour (responsable+, name, description, liste_debouch?, semester+) >
+<!ELEMENT liste_debouch (debouch*) >
+<!ELEMENT semester (bloc+) >
+<!ELEMENT bloc (liste_ref-unite) >
+<!ELEMENT liste_ref-unite (ref-unite+) >
+
+<!ELEMENT ref_lecturer (#PCDATA) >
+<!ELEMENT ref-unite (#PCDATA) >
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT last_name (#PCDATA) >
+<!ELEMENT mail (#PCDATA) >
+<!ELEMENT phone (#PCDATA) >
+<!ELEMENT site (#PCDATA) >
+<!ELEMENT credits (#PCDATA) >
+<!ELEMENT resume (#PCDATA) >
+<!ELEMENT hour_cours (#PCDATA) >
+<!ELEMENT hour_td (#PCDATA) >
+<!ELEMENT hour_tp (#PCDATA) >
+<!ELEMENT place (#PCDATA) >
+<!ELEMENT debouch (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT responsable (#PCDATA) >
+
+<!ATTLIST lecturer
+          id ID #REQUIRED>
+<!ATTLIST unite
+          id ID #REQUIRED>
+<!ATTLIST ref_lecturer
+          ref_lecturer IDREF #REQUIRED>
+<!ATTLIST responsable
+          ref_lecturer IDREF #REQUIRED>
+<!ATTLIST semester
+          id ID #REQUIRED>
+<!ATTLIST bloc
+          role ID #REQUIRED>
+<!ATTLIST ref-unite
+          ref-unite IDREF #REQUIRED>
+<!ATTLIST parcour
+          id ID #REQUIRED>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="master">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="lecturers"/>
+        <xs:element minOccurs="0" ref="unites"/>
+        <xs:element ref="program"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lecturers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="lecturer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lecturer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="last_name"/>
+        <xs:element minOccurs="0" ref="mail"/>
+        <xs:element minOccurs="0" ref="phone"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="site"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.lecturer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unites">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="unite"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="unite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element minOccurs="0" ref="liste_ref_lecturers"/>
+        <xs:element ref="credits"/>
+        <xs:element minOccurs="0" ref="resume"/>
+        <xs:element minOccurs="0" ref="plan"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.unite"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="liste_ref_lecturers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ref_lecturer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="plan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hour_cours"/>
+        <xs:element ref="hour_td"/>
+        <xs:element ref="hour_tp"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="place"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="program">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element maxOccurs="unbounded" ref="parcour"/>
+        <xs:element ref="specialty"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="specialty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="responsable"/>
+        <xs:element ref="name"/>
+        <xs:element ref="description"/>
+        <xs:element maxOccurs="unbounded" ref="parcour"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parcour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="responsable"/>
+        <xs:element ref="name"/>
+        <xs:element ref="description"/>
+        <xs:element minOccurs="0" ref="liste_debouch"/>
+        <xs:element maxOccurs="unbounded" ref="semester"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.parcour"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="liste_debouch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="debouch"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="semester">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="bloc"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.semester"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bloc">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="liste_ref-unite">
+          <xs:attributeGroup ref="attlist.bloc"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="liste_ref-unite">
+    <xs:sequence>
+      <xs:element ref="liste_ref-unite"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="liste_ref-unite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ref-unite"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref_lecturer">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="attlist.ref_lecturer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref-unite">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="attlist.ref-unite"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="last_name" type="xs:string"/>
+  <xs:element name="mail" type="xs:string"/>
+  <xs:element name="phone" type="xs:string"/>
+  <xs:element name="site" type="xs:string"/>
+  <xs:element name="credits" type="xs:string"/>
+  <xs:element name="resume" type="xs:string"/>
+  <xs:element name="hour_cours" type="xs:string"/>
+  <xs:element name="hour_td" type="xs:string"/>
+  <xs:element name="hour_tp" type="xs:string"/>
+  <xs:element name="place" type="xs:string"/>
+  <xs:element name="debouch" type="xs:string"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="responsable">
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="attlist.responsable"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.lecturer">
+    <xs:attribute name="id" use="required" type="xs:ID"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.unite">
+    <xs:attribute name="id" use="required" type="xs:ID"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.ref_lecturer">
+    <xs:attribute name="ref_lecturer" use="required" type="xs:IDREF"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.responsable">
+    <xs:attribute name="ref_lecturer" use="required" type="xs:IDREF"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.semester">
+    <xs:attribute name="id" use="required" type="xs:ID"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.bloc">
+    <xs:attribute name="role" use="required" type="xs:ID"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.ref-unite">
+    <xs:attribute name="ref-unite" use="required" type="xs:IDREF"/>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="attlist.parcour">
+    <xs:attribute name="id" use="required" type="xs:ID"/>
+  </xs:attributeGroup>
+</xs:schema>
