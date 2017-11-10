@@ -1,0 +1,198 @@
+@font-face {
+    font-family: "MaPolice";
+    src: url("../fonts/Timeless-Bold.ttf");
+}
+
+html {
+}
+
+body {
+	width: 65%;
+	margin: 1em auto 2em 15%;
+	font-family: Helvetica, Arial, sans-serif, "MaPolice";
+	background-color: white;
+	color:#7f7f7f;
+	position: relative;
+	background: url("../images/logo-ynov.png") 99% 2% no-repeat;
+	
+}
+
+a:link, a:visited {
+	color: #e93058;
+}
+
+a:hover, a:active {
+	color: /*#00561b*/#00a294;
+	text-decoration: none;
+}
+
+h1 {
+	padding-bottom: 0.25em;
+	border-bottom: 4px solid #ccc;
+	color: #e93058/*#bb0b0b*/;
+}
+
+h2 {
+	margin-left: 6%;
+	color: #00a294/*#bb0b0b*/;
+	font-size: 175%;
+	border-bottom: 2px solid #ccc;
+}
+
+ul#menu {
+	margin: 0;
+	width: 11.5%;
+	position: fixed;
+	left: 5%;
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #ccc;
+	list-style-type: none;
+	padding: 0.25% 0.5%;
+}
+
+ul#menu li {
+	margin: 2px 0 4px;
+}
+
+ul#responsable li {
+	list-style-type: disc;
+}
+
+ul#debouches {
+	margin: 1.5% 2%;
+}
+
+ul#ListeIntervenants li, #ListeUnites li, #Liste li, #ListeYnov li {
+	position:relative;
+}
+
+div#contenu {
+	position: absolute;
+	left: 6%;
+	width: 94%;
+	margin: 0;
+	background-color: rgba(0,0,0,0);
+}
+
+div#contenu ul {
+	list-style-type: square;
+	color:black;
+}
+
+div#contenu dl dd ul {
+	padding: 0 0 0 1em;
+}
+
+
+
+div#contenu h3 {
+	margin: 1% 0;
+	background-color: rgba(0,0,0,0);
+	border-bottom: 2px solid #ccc;
+	padding: 0.25em 0.5em;
+	font-size: 130%;
+	font-weight: bold;
+	font-style: italic;
+	color:#00a294;
+}
+
+div#contenu h3:first-child {
+	margin-top: 0;
+}
+
+div#contenu dl, h4 {
+	margin: 1.5% 2%;
+	color:black;
+}
+
+div#contenu dl dt {
+	font-weight: bold;
+	color:black;
+}
+
+div#contenu dl dd {
+	margin: 0.25em 0 0.5em 2em;
+	margin-top: 0.25em;
+	margin-bottom: 0.5em;
+	color:black;
+	text-align : justify;
+	padding-right:1.85em;
+}
+
+div#contenu p{
+	margin: 1.5% 2%;
+	text-align : justify;
+}
+
+div#contenu span{
+	font-size:10px;
+}
+
+img#archi{
+	position:relative;
+	width:115%;
+	left:-7%;
+}
+
+input[type="button"]{
+	position:relative;
+	width:20%;
+	color:#e93058;
+	background-color: rgba(0,0,0,0);
+	border: 1px solid #ccc;
+	text-align:center;
+	padding:0.25em 0.25em;
+	font-weight:bold;
+}
+
+input[type="button"]:hover{
+	width:20%;
+	border: 1px solid #ccc;
+	font-weight:bold;
+	box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 0);
+	color:#00a294;
+}
+
+
+
+*::-moz-focus-inner {
+border: none;
+}
+
+.tree {
+	width:60%;
+  margin:0;
+  padding:0;
+}
+.tree a {
+  text-decoration:none;
+  color:#e93058;
+}
+.tree ul {
+    padding:3px 0;
+    margin:0;
+}
+.tree li {
+  background:top left no-repeat;
+  cursor:pointer;
+  display:block;
+  list-style:none;
+  padding:3px 20px;
+}
+.tree .file {
+  background-image: url(../images/file.png);
+}
+.tree .folder {
+  background-image: url(../images/folder.png);
+}
+
+.tree .folder.open {
+        background-image: url(../images/folder2.png);
+    }
+
+.tree .counter {
+    color:#CC6600;
+}
+
+
+
