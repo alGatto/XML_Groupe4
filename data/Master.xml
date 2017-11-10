@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE master SYSTEM "Master.dtd">
+<?xml-stylesheet type="text/xls" href="master.xsl"?>
 <master>
     <lecturers>
         <lecturer id="AZZAG">
