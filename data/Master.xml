@@ -20,6 +20,13 @@
             <mail>emmanuel.chauvet@ynov.com</mail>
             <phone>04.91.01.02.04</phone>
         </lecturer>
+        <lecturer id="ANGLES">
+            <name>ANGLES </name>
+            <last_name>Renaud</last_name>
+            <mail>renaud.angles@ynov.com</mail>
+            <phone>04.91.01.02.05</phone>
+            <site>renaud-angles.fr</site>
+        </lecturer>
     </lecturers>
     <unites>
         <unite id="ENSMAU4">
@@ -31,16 +38,12 @@
             <plan>
                 <hour_cours>15h</hour_cours>
                 <hour_td>8h</hour_td>
-                <hour_tp>5h</hour_tp>
-                <place>Aix-en-Provence</place>
-                <place>Lyon</place>
-                <place>Bordeaux</place>
+                <hour_tp>5h</hour_tp>                
             </plan>
-        </unite>
-        <unite id="ENSMBU10">
-            <name>CISSP</name>
-            <credits>3</credits>
-        </unite>
+            <place>Aix-en-Provence</place>
+            <place>Lyon</place>
+            <place>Bordeaux</place>
+        </unite>        
         <unite id="ENSMBU4">
             <name>CCNP</name>
             <liste_ref_lecturers>
@@ -52,20 +55,14 @@
                 <hour_cours>10h</hour_cours>
                 <hour_td>10h</hour_td>
                 <hour_tp>10h</hour_tp>
-                <place>Aix-en-Provence</place>
-                <place>Lyon</place>
-                <place>Bordeaux</place>
-            </plan>
+            </plan>            
+            <place>Aix-en-Provence</place>
+            <place>Lyon</place>
+            <place>Bordeaux</place>
         </unite>
-        <unite id="ENSMBU6">
-            <name>Marketing Digital</name>
+        <unite id="ENSMBU10">
+            <name>CISSP</name>
             <credits>3</credits>
-            <plan>
-                <hour_cours>10h</hour_cours>
-                <hour_td>10h</hour_td>
-                <hour_tp>10h</hour_tp>
-                <place>Bordeaux</place>
-            </plan>
         </unite>
         <unite id="ENSMCU3">
             <name>Développement : Unity- applications mobiles et jeux vidéos</name>
@@ -74,6 +71,145 @@
             </liste_ref_lecturers>
             <credits>6</credits>
         </unite>
+        <unite id="ENSMCU2">
+            <name>Développement : programmation fonctionnelle</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="AZZAG"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>6</credits>
+        </unite>
+        <unite id="ENSMCU1">
+            <name>ECM : Gestion de contenu et documents (ECM)</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="CHAUVET"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>6</credits>
+        </unite>
+        <unite id="ENSMBU8">
+            <name>ETL, Big Data, HADOOP</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="BATISTONI"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>
+            </plan>
+            <place>Lyon</place>
+            <place>Bordeaux</place>
+        </unite>
+        <unite id="ENSMBU9">
+            <name>CCNP</name>
+            <credits>3</credits>
+        </unite>
+        <unite id="ENSMAU2">
+            <name>J2EE</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="CHAUVET"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>20h</hour_cours>
+                <hour_td>20h</hour_td>
+                <hour_tp>20h</hour_tp>
+            </plan>
+            <place>Bordeaux</place>
+        </unite>
+        <unite id="ENSMCU4">
+            <name>Réseau : Docker</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="BATISTONI"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>6</credits>
+        </unite>
+        <unite id="ENSMBU5">
+            <name>Supervision systems</name>
+            <credits>6</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>
+            </plan>
+            <place>Bordeaux</place>
+            <place>Aix-en-Provence</place>
+        </unite>
+        <unite id="ENSMBU2">
+            <name>Technologies Microsoft</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="AZZAG"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>                
+            </plan>
+            <place>Bordeaux</place>
+            <place>Aix-en-Provence</place>
+            <place>Lyon</place>
+        </unite>
+        <unite id="ENSMBU3">
+            <name>Virtualisation - VMWare</name>
+            <credits>6</credits>
+            <place>Bordeaux</place>
+            <place>Aix-en-Provence</place>
+            <place>Lyon</place>
+        </unite>
+        <unite id="ENSMBU1">
+            <name>Virtualisation du poste de travail</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="AZZAG"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>  
+            </plan>
+            <place>Bordeaux</place>
+            <place>Aix-en-Provence</place>
+            <place>Lyon</place>            
+        </unite>
+        <unite id="ENSMAU1">
+            <name>Web Services SOA SOAP</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="AZZAG"></ref_lecturer>
+                <ref_lecturer ref_lecturer="CHAUVET"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>3</credits>
+            <resume>XML - SOA - SOAP - REST - J2EE</resume>
+            <plan>
+                <hour_cours>20h</hour_cours>
+                <hour_td>20h</hour_td>
+                <hour_tp>20h</hour_tp>  
+            </plan>
+            <place>Aix-en-Provence</place>      
+        </unite>
+        <unite id="ENSMBU7">
+            <name>Web Sémantique SEOc</name>
+            <liste_ref_lecturers>
+                <ref_lecturer ref_lecturer="ANGLES"></ref_lecturer>
+            </liste_ref_lecturers>
+            <credits>6</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>  
+            </plan>
+            <place>Aix-en-Provence</place>      
+        </unite>
+        
+        <unite id="ENSMBU6">
+            <name>Marketing Digital</name>
+            <credits>3</credits>
+            <plan>
+                <hour_cours>10h</hour_cours>
+                <hour_td>10h</hour_td>
+                <hour_tp>10h</hour_tp>
+            </plan>
+            <place>Bordeaux</place>
+        </unite>        
     </unites>
     <program>
         <parcour id="Master1_INGESUP">

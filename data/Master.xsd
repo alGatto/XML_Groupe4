@@ -43,6 +43,7 @@
         <xs:element ref="credits"/>
         <xs:element minOccurs="0" ref="resume"/>
         <xs:element minOccurs="0" ref="plan"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="place"/>
       </xs:sequence>
       <xs:attributeGroup ref="attlist.unite"/>
     </xs:complexType>
@@ -60,7 +61,6 @@
         <xs:element ref="hour_cours"/>
         <xs:element ref="hour_td"/>
         <xs:element ref="hour_tp"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="place"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -5,9 +5,9 @@
 <!ELEMENT lecturer (name, last_name, mail?, phone?, site*) >
 
 <!ELEMENT unites (unite+) >
-<!ELEMENT unite (name, liste_ref_lecturers?, credits, resume?, plan?) >
+<!ELEMENT unite (name, liste_ref_lecturers?, credits, resume?, plan?, place*) >
 <!ELEMENT liste_ref_lecturers (ref_lecturer+) >
-<!ELEMENT plan (hour_cours, hour_td, hour_tp, place*) >
+<!ELEMENT plan (hour_cours, hour_td, hour_tp) >
 
 <!ELEMENT program (parcour+ | specialty) >
 <!ELEMENT specialty (responsable+, name, description, parcour+) >
