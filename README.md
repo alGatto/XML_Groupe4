@@ -27,14 +27,15 @@ Un Makefile est présent pour la gestion de l'ensemble des commandes
 - make dtd : vérifier la validité du document XML à l'aide de la DTD.
 - make xsd : vérifier la validité du document XML à l'aide du Schéma.
 - make web : générer le site WEB dans un répertoire qui doit se nommer www
-- make -i tidy : vérifier la validité des pages XHTML générées avec l'aide de tidy
+- make tidy : vérifier la validité des pages XHTML générées avec l'aide de tidy
 - make xq : exécuter la requête XQuery
-- make -i all : execute tout dans l'ordre
+- make all : execute tout dans l'ordre (sauf le clean)
 - make clean: nettoyage
 
 Sorties attendues
 -----------------
-
+- dossier Web www/*
+- Rapport d'erreur
 
 Bilan
 -----
