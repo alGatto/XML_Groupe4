@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
-<!--############### TO DO ###########################-->
-<!-- Génération d'une liste avec une règle nommé -->
-
 <xsl:stylesheet 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.1">
 	
 	<!-- Liste intervenants -->
-	<xsl:template match="lecturers">
+	<xsl:template match="lecturers" name="lecturers">
 		<h1>List of Lecturers</h1>
 		<xsl:for-each select="//lecturer">
 			<li><a href="#{attribute::id}"><xsl:value-of select="child::last_name"/><xsl:text> </xsl:text><xsl:value-of select="child::name"/></a></li>
